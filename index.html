@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LoanGuard AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#0052CC',
+              'brand-secondary': '#00A3BF',
+              'brand-accent': '#FFC400',
+              'brand-dark': '#334155', // Softer dark slate-blue
+              'brand-light': '#F4F5F7',
+              'brand-background': '#EFF6FF', // Light blue background
+              'brand-success': '#36B37E',
+              'brand-danger': '#FF5630',
+              'brand-warning': '#FFAB00',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-in-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      @media print {
+        body * {
+          visibility: hidden;
+        }
+        #print-area, #print-area * {
+          visibility: visible;
+        }
+        #print-area {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+        }
+        .no-print {
+          display: none;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.1.1",
+    "vite": "https://aistudiocdn.com/vite@^7.1.6",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.0.3"
+  }
+}
+</script>
+</head>
+  <body class="bg-brand-background">
+    <div id="root"></div>
+    <div id="print-area"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

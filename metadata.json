@@ -1,0 +1,5 @@
+{
+  "name": "LoanGuard AI",
+  "description": "An intelligent loan agreement analyzer for Indian consumers to avoid predatory lending and make informed loan decisions using Google Gemini AI. It helps users understand loan terms, compare offers, and get personalized fit scores.",
+  "requestFramePermissions": []
+}
